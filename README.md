@@ -34,8 +34,12 @@ Draft feature enumeration:
   - [ ] AJAX
     - [ ] Request queue
     - [ ] Bad connection handling / retries
+    - [ ] Progress indication
   - [ ] Notifications
   - [ ] Forms
+    - [ ] Error messages
+    - [ ] Debounce
+    - [ ] Double submit prevention
   - [ ] Promises
   - [ ] URL bound and URL unbound pages
   - [ ] CRUD
@@ -43,14 +47,19 @@ Draft feature enumeration:
     - [ ] Detail
     - [ ] Edit
     - [ ] Remove
+    - [ ] Inline edit
+    - [ ] Drag & Drop example
   - [ ] Index
     - [ ] Filters
     - [ ] Sorts
     - [ ] Perpage
     - [ ] Pagination
-    - [ ] Frontend-only filters (where possible)
+    - [ ] Frontend-only filtering, sorting, perpage (whenever possible)
     - [ ] Example of infinite scroll
+    - [ ] Example of masonry
   - [ ] Isomorphic app
+  - [ ] Frontend DB (query language)
+  - [ ] Optimistic updates
 
 - [ ] Bundling
   - [ ] Webpack
