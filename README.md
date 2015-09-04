@@ -18,8 +18,9 @@ Draft feature enumeration:
   - [ ] Absolute imports
   - [ ] Purely functional code ([Ramda](http://ramdajs.com))
   - [ ] Component approach
-  - [ ] REST API (backend)
-  - [ ] Dataflow (frontend)
+  - [ ] Frontend dataflow
+  - [ ] Backend REST API
+  - [ ] Frontend REST API
   - [ ] I18n, L10n
   - [ ] Validation
     - [ ] Validation rules sharing
