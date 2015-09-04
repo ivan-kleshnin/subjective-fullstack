@@ -16,7 +16,7 @@ Draft feature enumeration:
 - [ ] Architecture
   - [ ] Folder structure
   - [ ] Absolute imports
-  - [ ] Purely functional code ([Ramda](ramdajs.com))
+  - [ ] Purely functional code ([Ramda](http://ramdajs.com))
   - [ ] Component approach
   - [ ] REST API (backend)
   - [ ] Dataflow (frontend)
