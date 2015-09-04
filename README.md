@@ -60,6 +60,7 @@ Draft feature enumeration:
   - [ ] Isomorphic app
   - [ ] Frontend DB (query language)
   - [ ] Optimistic updates
+  - [ ] CSRF protection
 
 - [ ] Bundling
   - [ ] Webpack
@@ -84,6 +85,7 @@ Draft feature enumeration:
 
 - [ ] Undecided
   - [ ] CSS modules vs Local styles
+  - [ ] Real time (suspend for now)
 
 ## Install
 
