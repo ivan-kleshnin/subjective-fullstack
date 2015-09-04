@@ -1,7 +1,7 @@
 # CycleJS Ultimate
 
-Ultimate CycleJS demo. Experimental fork of [cycle-Ultimate](https://github.com/Paqmind/cycle-ultimate).
-This project aims to approach all common web app tasks.
+Ultimate CycleJS demo. Experimental fork of [React-Ultimate](https://github.com/Paqmind/react-ultimate).
+This project aims to approach all common web app tasks. Wish me good luck ;)
 
 Tech Stack:
 
