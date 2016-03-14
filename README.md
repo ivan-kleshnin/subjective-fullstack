@@ -7,9 +7,8 @@ Tech Stack:
 
 - CycleJS, RxJS
 - ES6, Babel
-- ExpressJS
-- SocketIO (undecided)
-- your-validation-library (undecided)
+- KoaJS
+- Tcomb
 
 Draft feature enumeration:
 
