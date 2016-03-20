@@ -1,5 +1,12 @@
 # CycleJS Ultimate
 
+#### Note
+
+*Development is delayed* :turtle:<br/>
+*Refer to [cyclejs-examples](https://github.com/ivan-kleshnin/cyclejs-examples) for now.*
+
+---
+
 Ultimate CycleJS demo. The revamped version of our popular [React-Ultimate](https://github.com/Paqmind/react-ultimate) repo.
 
 Tech Stack:
@@ -84,46 +91,3 @@ Draft feature enumeration:
 - [ ] Undecided
   - [ ] CSS modules vs Local styles
   - [ ] Real time (suspend for now)
-
-## Install
-
-```
-$ wget https://github.com/Paqmind/cycle-ultimate/archive/master.zip; unzip master.zip -d cycle-ultimate; rm master.zip
-$ cd cycle-starter
-$ npm install; bin/install
-```
-
-## Run
-
-Production
-```
-$ npm run build [terminal #1]
-$ npm run node  [terminal #2]
-```
-
-Development
-```
-$ npm run dev     [terminal #1]
-$ npm run nodemon [terminal #2]
-```
-
-## Lint
-
-```
-$ npm run lint -s (mute node output)
-```
-
-## Test
-
-All tests
-```
-$ npm test -s
-```
-
-Specific tests (`--` is an NPM syntax to pass arguments)
-```
-$ npm test -- --grep "api/robots POST" -s
-```
-
-Refer to [Mocha](https://github.com/mochajs/mocha) and [Chai](https://github.com/chaijs/chai)
-for more details.
