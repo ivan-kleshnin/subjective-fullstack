@@ -1,22 +1,4 @@
-# CycleJS Ultimate
-
-#### Note
-
-*Development is delayed* :turtle:<br/>
-*Refer to [cyclejs-examples](https://github.com/ivan-kleshnin/cyclejs-examples) for now.*
-
----
-
-Ultimate CycleJS demo. The revamped version of our popular [React-Ultimate](https://github.com/Paqmind/react-ultimate) repo.
-
-Tech Stack:
-
-- CycleJS, RxJS
-- ES6, Babel
-- KoaJS
-- Tcomb
-
-Draft feature enumeration:
+# Checklist
 
 - [ ] Architecture
   - [ ] Folder structure
