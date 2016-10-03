@@ -78,18 +78,34 @@
 
 ### Folder Structure
 
-Must not be a dogma. Here's my typical stuff just for the reference
+Must not be a dogma. Here's my typical stuff just for the reference:
 
 ```
-backend  // node app
-bin      // CLI scripts too big to fit for package.json 
-common   // types, common helpers
-crons    
-  hourly.js // one-structure-fits-all approach. Write your app code in project, not in crontabs
-  daily.js  // ...
+backend/
+bin/      
+common/   
+crons/    
+  hourly.js 
+  daily.js  
   ...  
-frontend // browser app + styles + (non-content) images + fonts, etc
-ignore   // under ".gitignore". I put random temporary stuff here like unfinished docs, etc.
-public   // better than "static" because: 1) reminds of security 2) "static" files will be in "src" as well
-tests    // better than "specs" (the latter is obscure)
+frontend/ 
+ignore/   
+public/   
+tests/    
 ```
+
+`backend/` – node app. Typically contains separate `app.js` (exports app) and `server.js` (serves app).
+
+`bin/` – CLI scripts too big to fit into `package.json`.
+
+`common/` – types, common helpers
+
+`crons/` – one-structure-fits-all approach. Write your app code in project, not in crontabs.
+
+`frontend/` – browser app + styles + (non-content) images + fonts, etc.
+
+`ignore/` – under ".gitignore". I put random temporary stuff here like unfinished docs, etc.
+
+`public/` – better than "static" because: 1) reminds of security 2) "static" files will be in "src" as well.
+
+`tests/` – better than "specs" (the latter is obscure as app can have real, human-readable specs).
