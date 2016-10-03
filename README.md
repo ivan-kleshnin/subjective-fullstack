@@ -73,3 +73,23 @@
 - [ ] Undecided
   - [ ] CSS modules vs Local styles
   - [ ] Real time (suspend for now)
+
+## Architecture
+
+### Folder Structure
+
+Must not be a dogma. Here's my typical stuff just for the reference
+
+```
+backend  // node app
+bin      // CLI scripts too big to fit for package.json 
+common   // types, common helpers
+crons    
+  hourly.js // one-structure-fits-all approach. Write your app code in project, not in crontabs
+  daily.js  // ...
+  ...  
+frontend // browser app + styles + (non-content) images + fonts, etc
+ignore   // under ".gitignore". I put random temporary stuff here like unfinished docs, etc.
+public   // better than "static" because: 1) reminds of security 2) "static" files will be in "src" as well
+tests    // better than "specs" (the latter is obscure)
+```
