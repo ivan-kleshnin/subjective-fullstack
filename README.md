@@ -114,6 +114,6 @@ tests/
 
 `ignore/` – under `.gitignore`. I put random temporary stuff here like unfinished docs, etc.
 
-`public/` – better than `static/` because: 1) reminds of security 2) "static" files will be in "src" as well.
+`public/` – better than `static/` because: 1) reminds of security 2) "static" files are in `frontend/` (or `src/`) as well.
 
 `tests/` – better than `specs/` as the latter is obscure . An app can have real, human-readable specs.
