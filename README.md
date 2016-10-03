@@ -104,9 +104,9 @@ tests/
 
 `bin/` – CLI scripts too big to fit into `package.json`.
 
-`common/permissions` – a list of permissions by role (or group). I'm pretty convinced a.t.m. that putting permissions in DB is a bad idea. The more stuff you have under VCS – the better. Code provides much better control and bug-safety than DB (in general).
+`common/permissions/` – a list of permissions by role (or group). I'm pretty convinced a.t.m. that putting permissions in DB is a bad idea. The more stuff you have under VCS – the better. Code provides much better control and bug-safety than DB (in general).
 
-`common/types` – Tcomb / TypeScript / Flow types. "Type" files also include type-specific but business-logic-generic helpers.
+`common/types/` – Tcomb / TypeScript / Flow types. "Type" files also include type-specific but business-logic-generic helpers.
 
 `crons/` – one-structure-fits-all approach. Write your app code in project, not in crontabs.
 
