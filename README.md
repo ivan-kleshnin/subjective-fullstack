@@ -4,6 +4,7 @@
   - [x] File structure
   - [x] Absolute imports
   - [x] Package managers
+  - [ ] Configuration management
   
 - [ ] Architecture
   - [ ] Purely functional code ([Ramda](http://ramdajs.com))
@@ -14,8 +15,6 @@
   - [ ] I18n, L10n
   - [ ] Validation
   - [ ] Validation rules sharing
-  - [ ] Multiple environments / configuration management
-  - [ ] Multiple frontend entry points
   - [ ] Frontend routing
   - [ ] Define frontend variables from backend / bundler
   - [ ] CORS support
