@@ -183,7 +183,7 @@ Despite all the bullshit said [here](https://gist.github.com/branneman/8048520)
 the only reasonable way to reproduce absolute imports is **symlinking**.
 
 It keeps every tool (including editors!) working. It keeps things simple.
-Present Windows version have solutions to emulate `ln`. The only thing you may notice – NPM warnings.
+Modern Windows versions have ways to emulate `ln`. The only thing you may notice – NPM warnings.
 The cost of abs. modules "emulation" through an app layer will be much higher, trust me.
 
 You need only: 
