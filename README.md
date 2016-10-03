@@ -1,8 +1,8 @@
 # Checklist
 
 - [ ] Architecture
-  - [ ] Folder structure
-  - [ ] Absolute imports
+  - [+] Folder structure
+  - [+] Absolute imports
   - [ ] Purely functional code ([Ramda](http://ramdajs.com))
   - [ ] Component approach
   - [ ] Frontend dataflow
@@ -183,5 +183,28 @@ Despite all the bullshit said [here](https://gist.github.com/branneman/8048520)
 the only reasonable way to reproduce absolute imports is **symlinking**.
 
 It keeps every tool (including editors!) working. It keeps things simple.
-Present Windows version have solutions to emulate `link`. The only thing you may notice – NPM warnings.
+Present Windows version have solutions to emulate `ln`. The only thing you may notice – NPM warnings.
 The cost of abs. modules "emulation" through an app layer will be much higher, trust me.
+
+You need only: 
+
+##### `bin/postinstall`
+```sh
+ln -sfn ../common node_modules/common
+ln -sfn ../backend node_modules/backend
+ln -sfn ../frontend node_modules/frontend
+ln -sfn ../tests node_modules/tests
+```
+
+and 
+
+##### `package.json`
+```json
+{
+  "scripts": {
+    "postinstall": "bin/postinstall"
+  }  
+}    
+```    
+
+and that's it.
