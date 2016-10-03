@@ -108,8 +108,6 @@ tests/
 
 `common/types` – Tcomb / TypeScript / Flow types. "Type" files also include type-specific but business-logic-generic helpers.
 
-`common/permissions` – 
-
 `crons/` – one-structure-fits-all approach. Write your app code in project, not in crontabs.
 
 `frontend/` – browser app + styles + (non-content) images + fonts, etc.
