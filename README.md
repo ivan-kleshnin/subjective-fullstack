@@ -84,6 +84,12 @@ Must not be a dogma. Here's my typical stuff just for the reference:
 backend/
 bin/      
 common/   
+  permissions/
+    admin.js
+    ...
+    visitor.js
+  types/    
+    User.js
 crons/    
   hourly.js 
   daily.js  
@@ -98,14 +104,18 @@ tests/
 
 `bin/` – CLI scripts too big to fit into `package.json`.
 
-`common/` – types, common helpers
+`common/permissions` – a list of permissions by role (or group). I'm pretty convinced a.t.m. that putting permissions in DB is a bad idea. The more stuff you have under VCS – the better. Code provides much better control and bug-safety than DB (in general).
+
+`common/types` – Tcomb / TypeScript / Flow types. "Type" files also include type-specific but business-logic-generic helpers.
+
+`common/permissions` – 
 
 `crons/` – one-structure-fits-all approach. Write your app code in project, not in crontabs.
 
 `frontend/` – browser app + styles + (non-content) images + fonts, etc.
 
-`ignore/` – under ".gitignore". I put random temporary stuff here like unfinished docs, etc.
+`ignore/` – under `.gitignore`. I put random temporary stuff here like unfinished docs, etc.
 
-`public/` – better than "static" because: 1) reminds of security 2) "static" files will be in "src" as well.
+`public/` – better than `static/` because: 1) reminds of security 2) "static" files will be in "src" as well.
 
-`tests/` – better than "specs" (the latter is obscure as app can have real, human-readable specs).
+`tests/` – better than `specs/` as the latter is obscure . An app can have real, human-readable specs.
