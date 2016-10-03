@@ -1,8 +1,8 @@
 # Checklist
 
 - [ ] Architecture
-  - [+] Folder structure
-  - [+] Absolute imports
+  - [x] Folder structure
+  - [x] Absolute imports
   - [ ] Purely functional code ([Ramda](http://ramdajs.com))
   - [ ] Component approach
   - [ ] Frontend dataflow
