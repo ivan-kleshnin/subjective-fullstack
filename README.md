@@ -1,4 +1,4 @@
-# Checklist
+# Fullstack App Checklist
 
 - [ ] Architecture
   - [x] Folder structure
