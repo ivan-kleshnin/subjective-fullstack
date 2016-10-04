@@ -1,10 +1,10 @@
-# Fullstack App Checklist
+# Subjective Fullstack (book drafts)
 
 - [ ] Project
-  - [x] File structure
-  - [x] Absolute imports
-  - [x] Package managers
-  - [ ] Configuration management
+  - [x] [File structure](./project/file-structure.md)
+  - [x] [Absolute imports](./project/absolute-imports.md)
+  - [x] [Package managers](./project/package-managers.md)
+  - [ ] [Configuration management](./project/configuration-management.md)
   
 - [ ] Architecture
   - [ ] Purely functional code ([Ramda](http://ramdajs.com))
