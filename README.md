@@ -5,7 +5,7 @@ A lot of them turn out to be more important for quality and productivity than th
 
 Asking such questions, the common answer you get is "It depends" or "Do how you prefer".
 As if you have infinite time to try every library, framework or approach.
-As if this process is more important then learning fundamentals, doing physical exercices, etc.
+As if this process is more important then learning fundamentals, doing physical exercises, etc.
 
 In this text I will explore the most "secret" areas, compare their alternatives,
 and give some guides and clues to choose between them. Nothing can replace your own experience
