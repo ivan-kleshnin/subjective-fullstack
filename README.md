@@ -8,7 +8,9 @@ As if you have infinite time to try every library, framework or approach.
 As if this process is more important then learning fundamentals, doing physical exercices, etc.
 
 In this text I will explore the most "secret" areas, compare their alternatives,
-and give some guides to reasonably choose between them. 
+and give some guides and clues to choose between them. Nothing can replace your own experience
+but in the lack of informantion even opinion matters a lot. And yes, in 2016 we still lack
+information in tons of areas (once you remove social and marketing noise).
 
 - [ ] Project
   - [ ] [Project file structure](./project/project-file-structure.md)
