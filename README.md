@@ -1,19 +1,14 @@
 # Subjective Fullstack (book drafts)
 
-We all know how useful and important is to view other other peoples doing their job.
-Not to copy-paste (nothing wrong with that) but to reconsider your own choices, habits.
-Especially – if youre working alone. Or if you're newcomer. Or if you're learning something new.
-
 There are a lot of things people don't like talking about because they are "subjective".
-A lot of such things turns out to be more important for your productivity and
-quality you produce than those... "objective" ones.
+A lot of them turn out to be more important for quality and productivity than those... "objective" ones.
 
-The usual answer (if present) is "it depends" or "do how you prefer".
-As if you have infinite time to try every library, framework, solution.
-As if this process is more important then learning fundamental stuff like math.
+Asking such questions, the common answer you get is "It depends" or "Do how you prefer".
+As if you have infinite time to try every library, framework or approach.
+As if this process is more important then learning fundamentals, doing physical exercices, etc.
 
-In this text I will explore the most "secret" subjects, compare alternative solutions (if there are)
-and give you some guides to reasonably choose between them (instead of "trying them all").
+In this text I will explore the most "secret" areas, compare their alternatives,
+and give some guides to reasonably choose between them. 
 
 - [ ] Project
   - [ ] [Project file structure](./project/project-file-structure.md)
