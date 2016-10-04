@@ -1,221 +1,69 @@
 # Subjective Fullstack (book drafts)
 
+We all know how useful and important is to view other other peoples doing their job.
+Not to copy-paste (nothing wrong with that) but to reconsider your own choices, habits.
+Especially – if youre working alone. Or if you're newcomer. Or if you're learning something new.
+
+There are a lot of things people don't like talking about because they are "subjective".
+A lot of such things turns out to be more important for your productivity and
+quality you produce than those... "objective" ones.
+
+The usual answer (if present) is "it depends" or "do how you prefer".
+As if you have infinite time to try every library, framework, solution.
+As if this process is more important then learning fundamental stuff like math.
+
+In this text I will explore the most "secret" subjects, compare alternative solutions (if there are)
+and give you some guides to reasonably choose between them (instead of "trying them all").
+
 - [ ] Project
-  - [x] [File structure](./project/file-structure.md)
-  - [x] [Absolute imports](./project/absolute-imports.md)
-  - [x] [Package managers](./project/package-managers.md)
-  - [ ] [Configuration management](./project/configuration-management.md)
-  
-- [ ] Architecture
-  - [ ] Purely functional code ([Ramda](http://ramdajs.com))
-  - [ ] Component approach
-  - [ ] Frontend dataflow
-  - [ ] Backend REST API
-  - [ ] Frontend REST API
-  - [ ] I18n, L10n
-  - [ ] Validation
-  - [ ] Validation rules sharing
-  - [ ] Frontend routing
-  - [ ] Define frontend variables from backend / bundler
-  - [ ] CORS support
-  - [ ] GZIP support
-  - [ ] DB pooling
-  - [ ] AJAX
-    - [ ] Request queue
-    - [ ] Bad connection handling / retries
-    - [ ] Progress indication
-  - [ ] Notifications
-  - [ ] Forms
-    - [ ] Error messages
-    - [ ] Debounce
-    - [ ] Double submit prevention
-  - [ ] Promises
-  - [ ] URL bound and URL unbound pages
-  - [ ] CRUD
-    - [ ] Create
-    - [ ] Detail
-    - [ ] Edit
-    - [ ] Remove
-    - [ ] Inline edit
-    - [ ] Drag & Drop example
-  - [ ] Index
-    - [ ] Filters
-    - [ ] Sorts
-    - [ ] Perpage
-    - [ ] Pagination
-    - [ ] Frontend-only filtering, sorting, perpage (whenever possible)
-    - [ ] Example of infinite scroll
-    - [ ] Example of masonry
-  - [ ] Isomorphic app
-  - [ ] Frontend DB (query language)
-  - [ ] Optimistic updates
-  - [ ] CSRF protection
+  - [ ] [Project file structure](./project/project-file-structure.md)
+  - [ ] [Absolute imports](./project/absolute-imports.md)
+  - [ ] [Package managers](./project/package-managers.md)
+  - [ ] [Environments and configurations](./project/environments-and-configurations.md)
+  - [ ] [VCS – area of control](./project/vcs-control-area.md)
+  - [ ] [Deployment](./project/deployment.md)
+  - [ ] [I18n, L10n]()
+
+- [ ] Frontend
+  - [ ] Routing. Error handling.
+  - [ ] Forms. Debouncing. Double submit prevention.
+  - [ ] Alerts.
+  - [ ] Pages vs Components.
+  - [ ] Security. XSS.
+  - [ ] AJAX. Request queue. Bad connection handling / retries.
+  - [ ] Progress indication. Spinners.
+
+- [ ] Backend
+  - [ ] Routing. Error handling. Logging.
+  - [ ] Databases. Pooling.
+  - [ ] Sessions.
+  - [ ] Index & CRUD.
+  - [ ] Security. CSRF.
+  - [ ] Authorization and Authentication. Tokens.
+  - [ ] Performance. GZIP. HTTP 2.0
+  - [ ] CORS.
 
 - [ ] Bundling
-  - [ ] Webpack
-  - [ ] Bundle minification (prod)
-  - [ ] Bundle uglification (prod)
-  - [ ] Bundle vendor splitting (dev)
-  - [ ] Source Maps (dev)
-  - [ ] Auto inline assets (prod)
-  - [ ] Cache management
-  - [ ] Skip already minified files
-  - [ ] Assets deduplication
+  - [ ] Webpack vs Browserify vs JSPM.
+  - [ ] LESS vs SASS vs PostCSS vs local styles. Autoprefixing.
+  - [ ] Vendor splitting.
+  - [ ] Source Maps.
+  - [ ] Auto reloads and Live reloads.
 
-- [ ] Development
-  - [ ] Backend server auto-reload
-  - [ ] Frontend live reload (dev)
-  - [ ] Frontend hot reLoad (dev)
+- [ ] Holistic
+  - [ ] Optimistic updates.
+  - [ ] Pagination vs Infinite Scroll. Masonry.
+  - [ ] Filtering and sorting. DB Indexes.
+  - [ ] Isomorphic apps.
+  - [ ] How to pass data from backend to frontend.
+  - [ ] Data fetching. Approaches. REST vs GraphQL.
+  - [ ] Cache management. Cache busting.
+  - [ ] Validation.
 
-- [ ] Code Quality
-  - [ ] Linting
-  - [ ] Unit tests
-  - [ ] Functional tests
-
-- [ ] Undecided
-  - [ ] CSS modules vs Local styles
-  - [ ] Real time (suspend for now)
-
-## Project
-
-### Folder Structure
-
-Must not be a dogma. Here's my typical stuff just for the reference:
-
-```
-backend/
-bin/      
-common/   
-  permissions/
-    admin.js
-    ...
-    visitor.js
-  types/    
-    Id.js
-    ...
-    User.js
-crons/    
-  hourly.js 
-  daily.js  
-  ...  
-frontend/ 
-ignore/   
-public/   
-tests/    
-```
-
-#### `backend/`
-
-Node app. Typically contains separate `app.js` (exports app) and `server.js` (serves app).
-
-#### `bin/` 
-
-CLI scripts too big to fit into `package.json`.
-
-#### `common/permissions/` 
-
-A list of permissions by role (or group). I'm pretty convinced a.t.m. that putting permissions in DB is a bad idea. The more stuff you have under VCS – the better. Code provides much better control and bug-safety than DB (in general).
-
-#### `common/types/` 
-
-Tcomb / TypeScript / Flow types. "Type" files also include type-specific but business-logic-generic helpers. 
-
-For example `User.js` can contain
-
-```
-export let User = T.struct({
-  id: Id,
-  email: Email,
-  ...
-})
-
-export let isPaidClient = (user) => user.activated && !user.blocked && user.paidUntil > new Date()
-```
-
-#### `crons/` 
-
-One-structure-fits-all approach. Write your app code in project, not in crontabs.
-
-#### `frontend/` 
-
-Browser app + styles + (non-content) images + fonts, etc.
-
-#### `ignore/` 
-
-Under `.gitignore`. I put random temporary stuff here like unfinished docs, etc.
-
-#### `public/` 
-
-Better than `static/` because: 1) reminds of security 2) "static" files are in `frontend/` (or `src/`) as well.
-
-#### `tests/` 
-
-Better than `specs/` as the latter is obscure . An app can have real, human-readable specs.
-
-### Absolute imports
-
-NodeJS notoriously lacks absolute imports. As a result we have to repeat `../` to the point it becomes udreadable:
-
-```js
-let KoaDb = require("../../middlewares/db")
-let KoaAuthenticate = require("../../middlewares/authenticate")
-let KoaAuthorize = require("../../middlewares/authorize")
-```
-
-What we wanted is:
-
-```js
-let KoaDb = require("backend/middlewares/db")
-let KoaAuthenticate = require("backend/middlewares/authenticate")
-let KoaAuthorize = require("backend/middlewares/authorize")
-```
-
-Besides the visual difference, the second version is more stable. 
-
-Imagine dependency graph `a -- b ; b -- c` where `b` imports `a` and `c` imports `b`.
-With relative imports:
-* if `a` is moved: `a` and `b` should be updated.
-* if `b` is moved: `b` and `c` should be updated.
-
-With absolute imports:
-* if `a` is moved: only `b` should be updated.
-* if `b` is moved: only `c` should be updated.
-
-Despite all the bullshit said [here](https://gist.github.com/branneman/8048520) 
-the only reasonable way to reproduce absolute imports is **symlinking**.
-
-It keeps every tool (including editors!) working. It keeps things simple.
-Modern Windows versions have ways to emulate `ln`. The only thing you may notice – NPM warnings.
-The cost of abs. modules "emulation" through an app layer will be much higher, trust me.
-
-You need only: 
-
-##### `bin/postinstall`
-```sh
-ln -sfn ../common node_modules/common
-ln -sfn ../backend node_modules/backend
-ln -sfn ../frontend node_modules/frontend
-ln -sfn ../tests node_modules/tests
-```
-
-and 
-
-##### `package.json`
-```json
-{
-  "scripts": {
-    "postinstall": "bin/postinstall"
-  }  
-}    
-```    
-
-and that's it.
-
-### Package managers
-
-You need only NPM and Webpack. No Bower, please.
-Try `$ npm install font-awesome`, `$ npm install bootstrap`...
-Then you `import "bootstrap/dist/css/bootstrap.css"` and Webpack takes the burden of minimizing / prefixing things
-on itself as long as you enable appropriate plugins. You can also import minimized version and avoid parsing if you need to – just create two or more different (yet similar) loaders with [according rules](http://stackoverflow.com/questions/33873317/how-to-exclude-files-from-loader).
-
-TODO provide `webpack.config.js` examples
+- [ ] Fundamental
+  - [ ] Functional programming.
+  - [ ] Reactive programming.
+  - [ ] Reactive state. Reducers.
+  - [ ] Linting vs Static typing.
+  - [ ] Tests vs Static typing.
+  - [ ] Unit tests vs Functional tests.
