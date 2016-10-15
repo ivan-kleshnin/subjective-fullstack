@@ -20,7 +20,6 @@ information in tons of areas (once you remove social and marketing noise).
   - [ ] [Environments and configurations](./project/environments-and-configurations.md)
   - [ ] [VCS – area of control](./project/vcs-control-area.md)
   - [ ] [Deployment](./project/deployment.md)
-  - [ ] [I18n, L10n]()
 
 - [ ] Frontend
   - [ ] Routing. Error handling.
@@ -50,6 +49,7 @@ information in tons of areas (once you remove social and marketing noise).
 
 - [ ] Holistic
   - [x] [Immutability](./holistic/immutability.md)
+  - [x] [I18n, L10n](./holistic/i18n.md)
   - [ ] Optimistic updates.
   - [ ] Pagination vs Infinite Scroll. Masonry.
   - [ ] Filtering and sorting. DB Indexes.
