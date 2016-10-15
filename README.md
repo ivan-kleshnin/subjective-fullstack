@@ -66,3 +66,7 @@ information in tons of areas (once you remove social and marketing noise).
   - [ ] Linting vs Static typing.
   - [ ] Tests vs Static typing.
   - [ ] Unit tests vs Functional tests.
+
+## Thanx to
+
+[@SteveALee](https://github.com/SteveALee) (suggestions for immutability section)
