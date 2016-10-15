@@ -13,6 +13,7 @@ but in the lack of information even opinion matters a lot. And yes, in 2016 we s
 information in tons of areas (once you remove social and marketing noise).
 
 - [ ] Project
+  - [x] [Styleguides](https://github.com/Paqmind/styleguides) – the only styleguides which explain WHY
   - [ ] [Project file structure](./project/project-file-structure.md)
   - [ ] [Absolute imports](./project/absolute-imports.md)
   - [ ] [Package managers](./project/package-managers.md)
