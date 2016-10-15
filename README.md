@@ -49,6 +49,7 @@ information in tons of areas (once you remove social and marketing noise).
   - [ ] Auto reloads and Live reloads.
 
 - [ ] Holistic
+  - [x] [Immutability](./holistic/immutability.md)
   - [ ] Optimistic updates.
   - [ ] Pagination vs Infinite Scroll. Masonry.
   - [ ] Filtering and sorting. DB Indexes.
