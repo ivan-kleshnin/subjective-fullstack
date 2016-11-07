@@ -1,6 +1,6 @@
 # VCS area of control
 
-The main idea: the more project-related things you keep and track inside a project – the better.
+The main idea: the more project-related things you keep and version-track inside a project – the better.
 
 [12 Factors Codebase](https://12factor.net/codebase)
 
