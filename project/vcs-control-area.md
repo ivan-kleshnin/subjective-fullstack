@@ -10,8 +10,10 @@ The main idea: the more project-related things you keep and version-track inside
 
 GIT makes some basic things unnecessarily hard.
 Main design mistake: GIT shares working dir among the branches.
-This requires us to use `npm install` after `git checkout somebranch`.
-Which is easy to forget and even with automation it requires time and internet connection.
+This requires us to use `npm install` after every `git checkout somebranch`.
+Which is slow, easy to forget (can be partially solved with automation) and requires an internet connection.
+Some aspects of this, like internet connection requirement, can be partially solved by better package managers. 
+See [Yarn](https://github.com/yarnpkg/yarn)
 
 It would be much better if GIT fixed this.
 
