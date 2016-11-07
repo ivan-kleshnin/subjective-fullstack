@@ -18,5 +18,5 @@ It would be much better if GIT fixed this.
 See https://twitter.com/adriancolyer/status/790455299450732544
 and https://twitter.com/adriancolyer/status/790817674964197376
 
-Until than, including `node_modules` under VCS can be considered a practical
+Until then, including `node_modules` under VCS can be considered a practical
 choice for some cases.
