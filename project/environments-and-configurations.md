@@ -47,7 +47,7 @@ The thing to consider is that all shell variables are strings.
 So you'll have to `if (SMTP_SECURE == "yes")` rather than `if (SMTP_SECURE)`.
 Such things are displeasing but not enough to justify a [library](https://github.com/lorenwest/node-config).
 
-Our current approach is to have a file `./backend/env.js` with a content like:
+Our current approach is to have a file `./common/env.js` with a content like:
 
 ```js
 let {env} = process
