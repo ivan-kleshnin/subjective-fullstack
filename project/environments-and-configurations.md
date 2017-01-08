@@ -18,10 +18,10 @@ NODE_ENV=production npm run foo
 or
 
 ```
-. .env ; npm run bar
+. dev.conf ; npm run bar
 ```
 
-The `.env.` file content may look like this:
+`dev.conf` file content may look like this:
 
 ```
 export NODE_ENV=development
@@ -115,11 +115,11 @@ Decent IDE / editors support "sort-by-type" mode so you don't need a `conf-` pre
 
 Project folder is one of the places which can be compromised more easily than others.
 Server bug can allow someone to `GET http://yoursite.com/public/../production.conf`.
-Some say `production.conf` should be encrypted but then where will you store the encryption key?
+Some people insist `prod.conf` should be encrypted but then where will you store the encryption key?
 Also encryptions can be brute-forced.
 
 So the better solution is to store the whole env inside OS environment variables (app `user` specific) and 
-possibly rely on files on dev machines.
+possibly rely on more convenient files in other enviroments. 
 
 ## Links
 
