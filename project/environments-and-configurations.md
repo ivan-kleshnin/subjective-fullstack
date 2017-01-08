@@ -1,6 +1,6 @@
 # Environments and Configurations
 
-We share the [Twelve-Factor App](https://12factor.net/config) opinion that platform- or library-specific configuration 
+We share the [Twelve-Factor App](https://12factor.net/config) opinion that platform or library specific configuration 
 systems are excessive and process environment should be used instead.
 
 In NodeJS it's `process.env` which can be get as a normal JS object 
