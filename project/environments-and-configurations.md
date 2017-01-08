@@ -118,8 +118,8 @@ Server bug can allow someone to `GET http://yoursite.com/public/../production.co
 Some people insist `prod.conf` should be encrypted but then where will you store the encryption key?
 Also encryptions can be brute-forced.
 
-So the better solution is to store the whole env inside OS environment variables (app `user` specific) and 
-possibly rely on more convenient files in other enviroments. 
+So the better solution is to store the whole env inside OS environment variables in production (app `user` specific) 
+and possibly rely on more convenient files in other enviroments. 
 
 ## Links
 
