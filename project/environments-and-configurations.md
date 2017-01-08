@@ -61,7 +61,7 @@ exports.SMTP_SECURE = env.SMTP_SECURE == "yes"
 ...
 
 exports.RETHINKDB_HOST = env.RETHINKDB_HOST || 8080
-exports.RETHINKDB_PORT = parseInt(env.RETHINK_DB) || 28015
+exports.RETHINKDB_PORT = parseInt(env.RETHINKDB_PORT) || 28015
 exports.RETHINKDB_DB = env.RETHINK_DB || "tsunami"
 ```
 
