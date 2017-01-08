@@ -45,8 +45,31 @@ export RETHINKDB_DB=tsunami
 
 The thing to consider is that all shell variables are strings. 
 So you'll have to `if (SMTP_SECURE == "yes")` rather than `if (SMTP_SECURE)`.
-Manual type casting is displeasing but it's a not a big deal and totally not enough
-of a reason to switch to a [library](https://github.com/hapijs/confidence) (see security considerations below).
+Such things are displeasing but not enough to justify a [library](https://github.com/lorenwest/node-config).
+
+Our current approach is to have a file `./env.js` with a content like:
+
+```js
+let {env} = process
+
+exports.SMTP_USERNAME = env.SMTP_USERNAME || "admin"
+exports.SMTP_PASSWORD = env.SMTP_PASSWORD || null
+exports.SMTP_HOST = env.SMTP_HOST || "localhost"
+exports.SMTP_PORT = parseInt(env.SMTP_PORT) || 1025
+exports.SMTP_SECURE = env.SMTP_SECURE == "yes"
+
+...
+
+exports.RETHINKDB_HOST = env.RETHINKDB_HOST || 8080
+exports.RETHINKDB_PORT = parseInt(env.RETHINK_DB) || 28015
+exports.RETHINKDB_DB = env.RETHINK_DB || "tsunami"
+```
+
+This file serves three purposes:
+
+1. Enumerates all env variables (no need for "sample.conf" reference file)
+2. Typecast all env variables (no need for in place casting etc.)
+3. Default all env variable (no need for in place value fallbacks)
 
 ## Where to store passwords
 
@@ -86,7 +109,7 @@ Do not enumerate them one by one (easy to forget new ones). Use catchall style.<
   *.conf
 ```
 
-Decent IDE / editors support type-first sorting so you don't need a `conf-` prefix to see configuration files sequentially.
+Decent IDE / editors support "sort-by-type" mode so you don't need a `conf-` prefix to see configuration files sequentially.
 
 ### 3. Sensitive data should not be located in the project folder
 
