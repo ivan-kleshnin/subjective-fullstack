@@ -68,8 +68,8 @@ exports.RETHINKDB_DB = env.RETHINK_DB || "tsunami"
 This file serves three purposes:
 
 1. Enumerates all env variables (no need for "sample.conf" reference file)
-2. Typecast all env variables (no need for in place casting etc.)
-3. Default all env variable (no need for in place value fallbacks)
+2. Typecasts all env variables (no need for in place casting etc.)
+3. Defaults all env variable (no need for in place value fallbacks)
 
 ## Where to store passwords
 
