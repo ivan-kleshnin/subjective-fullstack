@@ -12,60 +12,35 @@ and give some guides and clues to choose between them. Nothing can replace your 
 but in the lack of information even opinion matters a lot. And yes, in 2016 we still lack
 information in tons of areas (once you remove social and marketing noise).
 
-- [ ] Project
-  - [x] [Styleguides](https://github.com/Paqmind/styleguides) – the only styleguides which explain *whys*
-  - [ ] [Project file structure](./project/project-file-structure.md)
-  - [ ] [Absolute imports](./project/absolute-imports.md)
-  - [ ] [Package managers](./project/package-managers.md)
-  - [ ] [Environments and configurations](./project/environments-and-configurations.md)
-  - [ ] [VCS – area of control](./project/vcs-control-area.md)
-  - [ ] [Deployment](./project/deployment.md)
-
-- [ ] Frontend
-  - [ ] Routing. Error handling.
-  - [ ] Forms. Debouncing. Double submit prevention.
-  - [ ] Alerts.
-  - [ ] Pages vs Components.
-  - [ ] Security. XSS.
-  - [ ] AJAX. Request queue. Bad connection handling / retries.
-  - [ ] Progress indication. Spinners.
-
-- [ ] Backend
-  - [ ] Routing. Error handling. Logging.
-  - [ ] Databases. Pooling.
-  - [ ] Sessions.
-  - [ ] Index & CRUD.
-  - [ ] Security. CSRF.
-  - [ ] Authorization and Authentication. Tokens.
-  - [ ] Performance. GZIP. HTTP 2.0
-  - [ ] CORS.
-
-- [ ] Bundling
-  - [ ] Webpack vs Browserify vs JSPM.
-  - [ ] LESS vs SASS vs PostCSS vs local styles. Autoprefixing.
-  - [ ] Vendor splitting.
-  - [ ] Source Maps.
-  - [ ] Auto reloads and Live reloads.
-
-- [ ] Holistic
-  - [x] [Immutability](./holistic/immutability.md)
-  - [x] [I18n, L10n](./holistic/i18n.md)
-  - [ ] Optimistic updates.
-  - [ ] Pagination vs Infinite Scroll. Masonry.
-  - [ ] Filtering and sorting. DB Indexes.
-  - [ ] Isomorphic apps.
-  - [ ] How to pass data from backend to frontend.
-  - [ ] Data fetching. Approaches. REST vs GraphQL.
-  - [ ] Cache management. Cache busting.
-  - [ ] Validation.
-
-- [ ] Fundamental
-  - [ ] Functional programming.
-  - [ ] Reactive programming.
-  - [ ] Reactive state. Reducers.
-  - [ ] Linting vs Static typing.
-  - [ ] Tests vs Static typing.
-  - [ ] Unit tests vs Functional tests.
+* [x] [Absolute imports](./content/absolute-imports.md)
+* [ ] Alerts
+* [ ] Authentication & Authorization
+* [ ] Bundling
+* [ ] Caching
+* [ ] CSS and its replacements
+* [ ] Deployment
+* [ ] Data fetching
+* [x] [Environments and configurations](./content/environments-and-configurations.md)
+* [ ] Error handling
+* [ ] Filtering
+* [ ] Forms
+* [x] [I18n, L10n](./holistic/i18n.md)
+* [x] [Immutability](./holistic/immutability.md)
+* [ ] Logging
+* [ ] Optimistic Updates
+* [x] [Package managers](./content/package-managers.md)
+* [ ] Pagination strategies
+* [ ] Progress indication
+* [x] [Project file structure](./content/project-file-structure.md)
+* [ ] Routing
+* [ ] Security
+* [ ] Server-Side rendering
+* [ ] Sessions
+* [ ] Sorting
+* [ ] State
+* [x] [Styleguides](https://github.com/Paqmind/styleguides) – the only styleguides which explain *whys*
+* [ ] Validation
+* [x] [VCS – area of control](./content/vcs-control-area.md)
 
 ## Thanx to
 
