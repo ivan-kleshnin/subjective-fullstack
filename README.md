@@ -16,7 +16,7 @@ information in tons of areas (once you remove social and marketing noise).
 * [ ] Alerts
 * [ ] Authentication & Authorization
 * [ ] Bundling
-* [ ] Caching
+* [x] [Caching](./content/caching.md)
 * [ ] CSS and its replacements
 * [ ] Deployment
 * [ ] Data fetching
