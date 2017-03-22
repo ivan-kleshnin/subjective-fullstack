@@ -67,7 +67,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.5
 
 HTTP Headers:
 
-* `Cache-control: max-age: 60` (1 minute)`
+* `Cache-control: max-age: 60` (1 minute)
 * `Etag: ...`
 
 ### 4. Cache busting
@@ -77,7 +77,7 @@ can be ignored as invalid – as I've heard...). Then you're free from condition
 
 Again, two options: `bundle.css?v2` and `/v2/bundle.css`.
 Some people [say](https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/)
-that the second one is better because the first one was not compatible with reverse proxy caching.
+that the latter is better because the first one is not compatible with reverse proxy caching.
 
 Honestly, there's not enough confirmation for this. Even in that article (2008!) people were arguing against
 the author opinion saying that most proxies allow such customizations and they gradually become defaults.
@@ -98,5 +98,5 @@ browser restarts. Thus, if you are using fingerprinting or are otherwise program
 file URLs, to maximize cache hit rate, avoid the Firefox hash collision issue by ensuring that your
 application generates URLs that differ on more than 8-character boundaries.
 
-Hovewer, at the moment of this writing, this quote is no longer available (or searchable elsewhere)...
-Please let me know if you have a proof.
+Hovewer, at the moment of this writing, this quote is no longer available on the target site
+(or searchable elsewhere)... Please let me know if you have a proof.
