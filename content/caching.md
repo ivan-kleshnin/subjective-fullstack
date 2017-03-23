@@ -79,15 +79,20 @@ Again, two options: `bundle.css?v2` and `/v2/bundle.css`.
 Some people [say](https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/)
 that the latter is better because the first one is not compatible with reverse proxy caching.
 
-Honestly, there's not enough confirmation for this. Even in that article (2008!) people were arguing against
-the author opinion saying that most proxies allow such customizations and they gradually become defaults.
-Other mentions of the topic I found were referring to the same article...
+Honestly, there's no confirmation for this. Just a "common opinion" resonated from a single post back to 2008.
+And even in that thread (if you bother to read comments) people were arguing against the author point,
+saying that most proxies actually allow reconfigurations and already adopted better defaults.
+Still all 100500 overzealous comments on StackOveflow etc. about *how bad querystrings are*
+continue to use that single outdated source as a PROOF...
 
-As querystring is so much easier to change I tend to ask – Why not just read a version from package.json
-and put it there? Why invent webpack plugins for that?
+Due to my tests – everything works just fine with the QS postfix method.
 
-[This post](http://webmasters.stackexchange.com/questions/52948/url-with-query-disables-caching/52950)
-mentions a quirk with Firefox cache algorithm.
+So, as querystring is so much easier to change I tend to ask – Why not just read a version from package.json
+and put it there? Why shuffle your files? Why invent webpack plugins for that?
+If you don't want to expose the exact version – simply apply hashing (md5, etc).
+
+There is also [this post](http://webmasters.stackexchange.com/questions/52948/url-with-query-disables-caching/52950)
+which mentions a quirk with Firefox cache algorithm.
 
 Quote:
 
@@ -98,5 +103,5 @@ browser restarts. Thus, if you are using fingerprinting or are otherwise program
 file URLs, to maximize cache hit rate, avoid the Firefox hash collision issue by ensuring that your
 application generates URLs that differ on more than 8-character boundaries.
 
-Hovewer, at the moment of this writing, this quote is no longer available on the target site
-(or searchable elsewhere)... Please let me know if you have a proof.
+At the moment of this writing, this quote is no longer present on the target site, or searchable elsewhere...
+Please let me know if you have counter-proofs.
