@@ -118,7 +118,7 @@ Conclusion: use `public` name as it reminds of security (better than `static`).
 ### 2. Sensitive data should be hard to commit accidentally
 
 Conclusion: store such data in files with predefined extension which is used then in `.gitignore`.<br/>
-Do not enumerate them one by one (easy to forget new ones). Use catchall style.<br/>
+Do not enumerate them one by one (easy to forget new ones). Use the catch-all approach.<br/>
 
 #### Bad
 
@@ -140,8 +140,7 @@ Do not enumerate them one by one (easy to forget new ones). Use catchall style.<
 
 ```
 # .gitignore
-.conf-dev
-.conf-test
+*.env
 ```
 
 Decent IDE / editors support "sort-by-type" mode so you don't necessarily need a prefix to get your env files in order.
