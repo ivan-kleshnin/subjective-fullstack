@@ -15,7 +15,7 @@ and set like following
 NODE_ENV=production npm run foo
 ```
 
-You can all variables at once for a single SHELL session. Create a `dev.env` file with a content like:
+You can set all variables at once for a single terminal session. Create a `dev.env` file with a content like:
 
 ```
 export NODE_ENV=development
