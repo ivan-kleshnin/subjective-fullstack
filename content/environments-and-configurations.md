@@ -99,8 +99,9 @@ exports.RETHINKDB_PORT = parseInt(env.RETHINKDB_PORT) || abort()
 exports.RETHINKDB_DB = env.RETHINK_DB || abort()
 ```
 
-– But what if I want to pass objects and arrays? – you ask. In general, such overconfigurations 
-often mean you're doing something wrong. But if you insist – JSON is at your service.
+*– But what if I want to pass objects and arrays?* – you ask. In general, such overconfigurations 
+often mean you're doing something wrong. But if you insist – JSON is at your service. Passing
+something language specific would definitely classify as an antipattern but JSON... is fine.
 
 ```js
 exports.SOME_OBJECT = JSON.parse(env.SOME_OBJECT) || abort()
