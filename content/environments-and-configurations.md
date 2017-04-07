@@ -153,7 +153,7 @@ Some people insist `prod.conf` should be encrypted but then where will you store
 Also encryptions can be brute-forced.
 
 So the better solution is to store the whole env inside OS environment variables in production (app `user` specific) 
-and possibly rely on more convenient files in other enviroments. 
+and possibly rely on more convenient files in other environments. 
 
 ## Links
 
