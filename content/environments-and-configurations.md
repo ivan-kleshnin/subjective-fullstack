@@ -15,13 +15,7 @@ and set like following
 NODE_ENV=production npm run foo
 ```
 
-or
-
-```
-. dev.conf ; npm run bar
-```
-
-`dev.conf` file content may look like this:
+You can all variables at once for a single SHELL session. Create a `dev.env` file with a content like:
 
 ```
 export NODE_ENV=development
@@ -43,11 +37,34 @@ export RETHINKDB_PORT=28015
 export RETHINKDB_DB=tsunami
 ```
 
+Now load it
+
+```
+$ . dev.conf 
+```
+
+And run your scripts without a fuss
+
+```
+$ npm run foo # MAIL_ROBOT is robot@tsunami.com
+...
+$ npm run bar # MAIL ROBOT is still robot@tsunami.com
+```
+
+Shall you need to switch an environment:
+
+```
+$ . dev.test  # source other file
+$ npm run foo # MAIL_ROBOT now robot@test.tsunami.com
+```
+
+Or do all that at once `$ . dev.conf ; npm run foo` (SHELL will continue to "remember" those variables).
+
 The thing to consider is that all shell variables are strings. 
 So you'll have to `if (SMTP_SECURE == "yes")` rather than `if (SMTP_SECURE)`.
 Such things are displeasing but not enough to justify a [library](https://github.com/lorenwest/node-config).
 
-Our current approach is to have a file `./common/env.js` with a content like:
+Our current approach is to have a file `./env.js` with a content like:
 
 ```js
 let {env} = process
@@ -70,6 +87,8 @@ This file serves three purposes:
 1. Enumerates all env variables (no need for "sample.conf" reference file)
 2. Typecasts all env variables (no need for in place casting etc.)
 3. Defaults all env variable (no need for in place value fallbacks)
+
+Or you can just throw on missing ENV variable, preventing potentially invalid runs.
 
 ## Where to store passwords
 
@@ -100,13 +119,13 @@ Do not enumerate them one by one (easy to forget new ones). Use catchall style.<
 #### Better
 
 ```
-# dev.conf
+# dev.env
 
-# test.conf
+# test.env
 
 # .gitignore
   ...
-  *.conf
+  *.env
 ```
 
 Decent IDE / editors support "sort-by-type" mode so you don't need a `conf-` prefix to see configuration files sequentially.
