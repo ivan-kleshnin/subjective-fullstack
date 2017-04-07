@@ -93,7 +93,7 @@ This file serves three purposes:
 
 Or you can just throw on missing ENV variable, preventing potentially invalid runs:
 
-```
+```js
 exports.RETHINKDB_HOST = env.RETHINKDB_HOST || abort()
 exports.RETHINKDB_PORT = parseInt(env.RETHINKDB_PORT) || abort()
 exports.RETHINKDB_DB = env.RETHINK_DB || abort()
@@ -102,7 +102,7 @@ exports.RETHINKDB_DB = env.RETHINK_DB || abort()
 – But what if I want to pass objects and arrays? – you ask. In general, such overconfigurations 
 often mean you're doing something wrong. But if you insist – JSON is at your service.
 
-```
+```js
 exports.SOME_OBJECT = JSON.parse(env.SOME_OBJECT) || abort()
 ```
 
