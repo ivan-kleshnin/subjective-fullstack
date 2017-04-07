@@ -100,7 +100,7 @@ exports.RETHINKDB_DB = env.RETHINK_DB || abort()
 ```
 
 *– But what if I want to pass objects and arrays?* – you ask. In general, such overconfigurations 
-often mean you're doing something wrong. But if you insist – JSON is at your service. Passing
+often mean you're doing something wrong. If you insist – JSON is at your service. Passing
 something language specific would definitely classify as an antipattern but JSON... is fine.
 
 ```js
@@ -122,30 +122,29 @@ Do not enumerate them one by one (easy to forget new ones). Use catchall style.<
 
 #### Bad
 
+* .conf-dev
+* .conf-test
+* .gitignore
+
 ```
-# .conf-dev
-
-# .conf-test
-
 # .gitignore
-  ...
-  .conf-dev
-  .conf-test
+.conf-dev
+.conf-test
 ```
 
 #### Better
 
+* dev.env
+* test.env
+* .gitignore
+
 ```
-# dev.env
-
-# test.env
-
 # .gitignore
-  ...
-  *.env
+.conf-dev
+.conf-test
 ```
 
-Decent IDE / editors support "sort-by-type" mode so you don't need a `conf-` prefix to see configuration files sequentially.
+Decent IDE / editors support "sort-by-type" mode so you don't necessarily need a prefix to get your env files in order.
 
 ### 3. Sensitive data should not be located in the project folder
 
