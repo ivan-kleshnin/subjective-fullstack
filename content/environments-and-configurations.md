@@ -48,7 +48,7 @@ And run your scripts without a fuss
 ```
 $ npm run foo # MAIL_ROBOT is robot@tsunami.com
 ...
-$ npm run bar # MAIL ROBOT is still robot@tsunami.com
+$ npm run bar # MAIL_ROBOT is still robot@tsunami.com
 ```
 
 Shall you need to switch an environment:
