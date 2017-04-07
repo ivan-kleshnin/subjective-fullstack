@@ -91,7 +91,20 @@ This file serves three purposes:
 2. Typecasts all env variables (no need for in place casting etc.)
 3. Defaults all env variable (no need for in place value fallbacks)
 
-Or you can just throw on missing ENV variable, preventing potentially invalid runs.
+Or you can just throw on missing ENV variable, preventing potentially invalid runs:
+
+```
+exports.RETHINKDB_HOST = env.RETHINKDB_HOST || abort()
+exports.RETHINKDB_PORT = parseInt(env.RETHINKDB_PORT) || abort()
+exports.RETHINKDB_DB = env.RETHINK_DB || abort()
+```
+
+– But what if I want to pass objects and arrays? – you ask. In general, such overconfigurations 
+often mean you're doing something wrong. But if you insist – JSON is at your service.
+
+```
+exports.SOME_OBJECT = JSON.parse(env.SOME_OBJECT) || abort()
+```
 
 ## Where to store passwords
 
