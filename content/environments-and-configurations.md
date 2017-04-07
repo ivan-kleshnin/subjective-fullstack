@@ -60,7 +60,7 @@ $ npm run foo # MAIL_ROBOT now robot@test.tsunami.com
 
 Or do all that at once `$ . dev.conf ; npm run foo` (SHELL will continue to "remember" those variables).
 
-How is this better any configuration management framework? Frameworks come and go. UNIX stays with the same syntax.
+How is this better than any configuration management framework? Frameworks come and go. UNIX stays with the same syntax.
 Relearning and reimplementing the stuff you already have for free is Evil.
 
 The thing to consider is that all shell variables are strings. 
