@@ -3,8 +3,8 @@
 Must not be a dogma. Here's my typical stuff just for the reference:
 
 ```
-backend/
 bin/
+client/
 common/
   permissions/
     admin.js
@@ -18,15 +18,15 @@ crons/
   hourly.js
   daily.js
   ...
-frontend/
 ignore/
 public/
+server/
 tests/
 ```
 
-#### `backend/`
+#### `server/`
 
-Node app. Typically contains separate `app.js` (exports app) and `server.js` (serves app).
+Server-side app. Typically contains separate `app.js` (exports app) and `server.js` (serves app).
 
 #### `bin/`
 
@@ -56,7 +56,7 @@ export let isPaidClient = (user) => user.activated && !user.blocked && user.paid
 
 One-structure-fits-all approach. Write your app code in project, not in crontabs.
 
-#### `frontend/`
+#### `client/`
 
 Browser app + styles + (non-content) images + fonts, etc.
 
