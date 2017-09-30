@@ -24,8 +24,8 @@ information in tons of areas (once you remove social and marketing noise).
 * [ ] Error handling
 * [ ] Filtering
 * [ ] Forms
-* [x] [I18n, L10n](./holistic/i18n.md)
-* [x] [Immutability](./holistic/immutability.md)
+* [x] [I18n, L10n](./content/i18n.md)
+* [x] [Immutability](./content/immutability.md)
 * [ ] Logging
 * [ ] Optimistic Updates
 * [x] [Package managers](./content/package-managers.md)
